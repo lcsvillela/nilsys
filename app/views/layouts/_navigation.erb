@@ -2,18 +2,23 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-light">
     <div class="container-fluid ">
       <div class="mx-auto">
-        <%= link_to "Início", root_path, :class => "btn btn-secondary" %>
-      <% if !logged_in? %>
-
-          <%= link_to "Entrar", login_path, :class => "btn btn-secondary" %>
-          <%= link_to "Registrar", new_user_path,:class => "btn btn-secondary"  %>
-        <% else %>
-            <%= link_to "Minha Página", '/users/show', method: :get, :class => "btn btn-secondary" %>
-            <%= link_to "Sair", logout_path, method: :get, :class => "btn btn-secondary" %>
+        <div class="d-flex flex xt-2 yt-2 justify-content-center">
+          
+          <div class="app xt-1 yt-1">
+            <%= link_to "Início", root_path, :class => "btn btn-secondary" %>
+            <% if !logged_in? %>
+              <%= link_to "Entrar", login_path, :class => "btn btn-secondary" %>
+              <%= link_to "Registrar", new_user_path,:class => "btn btn-secondary"  %>
+            <% else %>
+              <%= link_to "Minha Página", '/users/show', method: :get, :class => "btn btn-secondary" %>
+              <%= link_to "Sair", logout_path, method: :get, :class => "btn btn-secondary" %>
           <% end %>
           
-          <%= link_to "Saiba Mais", "https://lcsvillela.github.io", :class => "btn btn-secondary" %>
-          <%= link_to "Código Fonte", "https://github.com/lcsvillela/nilsys", :class => "btn btn-secondary" %>
+
+            <%= link_to "Saiba Mais", "https://lcsvillela.github.io", :class => "btn btn-secondary" %>
+            <%= link_to "Código Fonte", "https://github.com/lcsvillela/nilsys", :class => "btn btn-secondary" %>
+            </div>
+          </div>
       </div>
 
 </div>
