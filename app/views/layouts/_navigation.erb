@@ -2,12 +2,14 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-light">
     <div class="container-fluid ">
       <div class="mx-auto">
+        <%= link_to "Início", root_path, :class => "btn btn-secondary" %>
       <% if !logged_in? %>
 
           <%= link_to "Entrar", login_path, :class => "btn btn-secondary" %>
           <%= link_to "Registrar", new_user_path,:class => "btn btn-secondary"  %>
-      <% else %>
-            <%= link_to "Sair", logout_path, method: :delete, :class => "btn btn-secondary" %>
+        <% else %>
+            <%= link_to "Minha Página", '/users/show', method: :get, :class => "btn btn-secondary" %>
+            <%= link_to "Sair", logout_path, method: :get, :class => "btn btn-secondary" %>
           <% end %>
           
           <%= link_to "Mais sobre", "https://lcsvillela.github.io", :class => "btn btn-secondary" %>
