@@ -1,0 +1,15 @@
+<div class="container-fluid">
+  <div class="d-flex justify-content-center">
+
+    <div class="d-flex flex-column">
+      <h1>Acesse sua conta</h1>
+    <%= form_with url: '/login', local: true do |f| %>
+      <%= f.label :email %><br>
+      <%= f.text_field :email, autofocus: true %><br>
+      <%= f.label :password %><br>
+      <%= f.password_field :password %><br>
+      <%= f.submit "Login",:class => "btn btn-primary" %>
+  </div>
+  </div>
+  </div>
+<% end %>

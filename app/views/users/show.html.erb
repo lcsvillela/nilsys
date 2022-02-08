@@ -1,0 +1,12 @@
+<div class="container-fluid">
+  <div class="d-flex justify-content-center">
+    <div class="d-flex flex-column">
+      <h1>Seja bem vinda(o) <%= current_user.username %>
+      <h5>Seu email atual é: <%= current_user.email %>
+
+</h1><%= link_to "Mudar senha", edit_user_path(current_user), :class => "btn btn-warning" %>
+
+<%= link_to "Deletar conta", current_user, data: { confirm: "Are you sure?" }, method: :delete, :class => "btn btn-danger" %>
+    </div>
+  </div>
+  </div>

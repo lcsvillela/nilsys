@@ -1,0 +1,16 @@
+<div class="container-fluid">
+  <div class="d-flex justify-content-center">
+    <div class="d-flex flex-column">
+
+    <h1>Mudar senha</h1>
+
+<%= form_with model: @user, local: true do |f| %>
+  <%= f.label :password %><br>
+  <%= f.password_field :password %><br>
+
+  <%= f.submit "Confirm Changes",:class => "btn btn-primary" %>
+<% end %>
+
+    </div>
+  </div>
+  </div>
