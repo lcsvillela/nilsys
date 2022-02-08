@@ -27,7 +27,7 @@ class UsersController < ApplicationController
 
   def update
     if @user
-      @user.update(user_params)
+      @user.update(user_edit)
 
       if @user.errors.any?
         render "edit"
@@ -47,7 +47,11 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:email, :password)
+    params.require(:user).permit(:username,:email, :password)
+  end
+
+  def user_edit
+    params.require(:user).permit(:password)
   end
 
   def set_user
